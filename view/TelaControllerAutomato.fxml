@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+
+<AnchorPane fx:id="anchorPaneGeral" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerAutomato">
+   <children>
+      <AnchorPane fx:id="anchorPaneInicial" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" visible="false">
+         <children>
+            <ImageView fx:id="imgBackgroundInicial" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/img/imgBackgrounds/BackgroundInicial.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnIniciar" layoutX="370.0" layoutY="270.0" mnemonicParsing="false" onAction="#iniciar" prefHeight="60.0" prefWidth="60.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css">
+               <graphic>
+                  <ImageView fx:id="imgPlayInicial" fitHeight="41.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/imgButtons/Play.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorPanePrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <ImageView fx:id="imgBackgroundTransito" fitHeight="607.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/img/imgBackgrounds/BackgroundTransito.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgPercursoVermelho" fitHeight="624.0" fitWidth="607.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../resources/img/imgPercursos/Percurso_Vermelho.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgPercursoAzul" fitHeight="624.0" fitWidth="607.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../resources/img/imgPercursos/Percurso_Azul.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgPercursoVerde" fitHeight="624.0" fitWidth="607.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../resources/img/imgPercursos/Percurso_Verde.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgPercursoLaranja" fitHeight="600.0" fitWidth="260.0" layoutX="120.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../resources/img/imgPercursos/Percurso_Laranja.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgPercursoBranco" fitHeight="624.0" fitWidth="607.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../resources/img/imgPercursos/Percurso_Branco.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgPercursoMarrom" fitHeight="624.0" fitWidth="607.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../resources/img/imgPercursos/Percurso_Marrom.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgPercursoAmarelo" fitHeight="600.0" fitWidth="261.0" layoutX="235.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../resources/img/imgPercursos/Percurso_Amarelo.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgPercursoRoxo" fitHeight="384.0" fitWidth="374.0" layoutX="234.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../resources/img/imgPercursos/Percurso_Roxo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnPlayVermelho" layoutX="611.0" layoutY="18.0" mnemonicParsing="false" onAction="#pausar" prefHeight="30.0" prefWidth="30.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css">
+               <graphic>
+                  <ImageView fx:id="imgPlayVermelho" fitHeight="26.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/imgButtons/iconPause.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnViewVermelho" layoutX="649.0" layoutY="18.0" mnemonicParsing="false" onAction="#visualizarPercurso" prefHeight="30.0" prefWidth="30.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css">
+               <graphic>
+                  <ImageView fx:id="imgViewVermelho" fitHeight="34.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/imgButtons/visivel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Slider fx:id="sliderVermelho" blockIncrement="5.0" layoutX="691.0" layoutY="13.0" max="25.0" min="5.0" prefHeight="40.0" prefWidth="109.0" rotate="180.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css" value="25.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Slider>
+            <Button fx:id="btnPlayAzul" layoutX="611.0" layoutY="82.0" mnemonicParsing="false" onAction="#pausar" prefHeight="30.0" prefWidth="30.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css">
+               <graphic>
+                  <ImageView fx:id="imgPlayAzul" fitHeight="26.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/imgButtons/iconPause.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnViewAzul" layoutX="649.0" layoutY="82.0" mnemonicParsing="false" onAction="#visualizarPercurso" prefHeight="30.0" prefWidth="30.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css">
+               <graphic>
+                  <ImageView fx:id="imgViewAzul" fitHeight="34.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/imgButtons/visivel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Slider fx:id="sliderAzul" blockIncrement="5.0" layoutX="691.0" layoutY="78.0" max="25.0" min="5.0" prefHeight="40.0" prefWidth="109.0" rotate="180.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css" value="25.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Slider>
+            <Button fx:id="btnPlayVerde" layoutX="611.0" layoutY="140.0" mnemonicParsing="false" onAction="#pausar" prefHeight="30.0" prefWidth="30.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css">
+               <graphic>
+                  <ImageView fx:id="imgPlayVerde" fitHeight="26.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/imgButtons/iconPause.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnViewVerde" layoutX="649.0" layoutY="140.0" mnemonicParsing="false" onAction="#visualizarPercurso" prefHeight="30.0" prefWidth="30.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css">
+               <graphic>
+                  <ImageView fx:id="imgViewVerde" fitHeight="34.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/imgButtons/visivel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Slider fx:id="sliderVerde" blockIncrement="5.0" layoutX="691.0" layoutY="136.0" max="25.0" min="5.0" prefHeight="40.0" prefWidth="109.0" rotate="180.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css" value="25.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Slider>
+            <Button fx:id="btnPlayLaranja" layoutX="611.0" layoutY="197.0" mnemonicParsing="false" onAction="#pausar" prefHeight="30.0" prefWidth="30.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css">
+               <graphic>
+                  <ImageView fx:id="imgPlayLaranja" fitHeight="26.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/imgButtons/iconPause.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnViewLaranja" layoutX="649.0" layoutY="197.0" mnemonicParsing="false" onAction="#visualizarPercurso" prefHeight="30.0" prefWidth="30.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css">
+               <graphic>
+                  <ImageView fx:id="imgViewLaranja" fitHeight="34.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/imgButtons/visivel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Slider fx:id="sliderLaranja" blockIncrement="5.0" layoutX="691.0" layoutY="193.0" max="25.0" min="5.0" prefHeight="40.0" prefWidth="109.0" rotate="180.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css" value="25.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Slider>
+            <Button fx:id="btnPlayBranco" layoutX="611.0" layoutY="256.0" mnemonicParsing="false" onAction="#pausar" prefHeight="30.0" prefWidth="30.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css">
+               <graphic>
+                  <ImageView fx:id="imgPlayBranco" fitHeight="26.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/imgButtons/iconPause.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnViewBranco" layoutX="649.0" layoutY="256.0" mnemonicParsing="false" onAction="#visualizarPercurso" prefHeight="30.0" prefWidth="30.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css">
+               <graphic>
+                  <ImageView fx:id="imgViewBranco" fitHeight="34.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/imgButtons/visivel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Slider fx:id="sliderBranco" blockIncrement="5.0" layoutX="691.0" layoutY="252.0" max="25.0" min="5.0" prefHeight="40.0" prefWidth="109.0" rotate="180.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css" value="25.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Slider>
+            <Button fx:id="btnPlayMarrom" layoutX="611.0" layoutY="315.0" mnemonicParsing="false" onAction="#pausar" prefHeight="30.0" prefWidth="30.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css">
+               <graphic>
+                  <ImageView fx:id="imgPlayMarrom" fitHeight="26.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/imgButtons/iconPause.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnViewMarrom" layoutX="649.0" layoutY="315.0" mnemonicParsing="false" onAction="#visualizarPercurso" prefHeight="30.0" prefWidth="30.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css">
+               <graphic>
+                  <ImageView fx:id="imgViewMarrom" fitHeight="34.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/imgButtons/visivel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Slider fx:id="sliderMarrom" blockIncrement="5.0" layoutX="691.0" layoutY="311.0" max="25.0" min="5.0" prefHeight="40.0" prefWidth="109.0" rotate="180.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css" value="25.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Slider>
+            <Button fx:id="btnPlayAmarelo" layoutX="611.0" layoutY="369.0" mnemonicParsing="false" onAction="#pausar" prefHeight="30.0" prefWidth="30.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css">
+               <graphic>
+                  <ImageView fx:id="imgPlayAmarelo" fitHeight="26.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/imgButtons/iconPause.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnViewAmarelo" layoutX="649.0" layoutY="369.0" mnemonicParsing="false" onAction="#visualizarPercurso" prefHeight="30.0" prefWidth="30.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css">
+               <graphic>
+                  <ImageView fx:id="imgViewAmarelo" fitHeight="34.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/imgButtons/visivel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Slider fx:id="sliderAmarelo" blockIncrement="5.0" layoutX="691.0" layoutY="365.0" max="25.0" min="5.0" prefHeight="40.0" prefWidth="109.0" rotate="180.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css" value="25.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Slider>
+            <Button fx:id="btnPlayRoxo" layoutX="611.0" layoutY="430.0" mnemonicParsing="false" onAction="#pausar" prefHeight="30.0" prefWidth="30.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css">
+               <graphic>
+                  <ImageView fx:id="imgPlayRoxo" fitHeight="26.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/imgButtons/iconPause.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnViewRoxo" layoutX="649.0" layoutY="430.0" mnemonicParsing="false" onAction="#visualizarPercurso" prefHeight="30.0" prefWidth="30.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css">
+               <graphic>
+                  <ImageView fx:id="imgViewRoxo" fitHeight="34.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/imgButtons/visivel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Slider fx:id="sliderRoxo" blockIncrement="5.0" layoutX="691.0" layoutY="426.0" max="25.0" min="5.0" prefHeight="40.0" prefWidth="109.0" rotate="180.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css" value="25.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Slider>
+            <ImageView fx:id="imgCarroVermelho" fitHeight="40.0" fitWidth="18.0" layoutX="26.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+               <image>
+                  <Image url="@../resources/img/imgCarros/carroVermelho.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgCarroAzul" fitHeight="40.0" fitWidth="18.0" layoutX="234.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/img/imgCarros/carroAzul.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgCarroVerde" fitHeight="40.0" fitWidth="18.0" layoutX="26.0" layoutY="459.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+               <image>
+                  <Image url="@../resources/img/imgCarros/carroVerde.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgCarroLaranja" fitHeight="40.0" fitWidth="18.0" layoutX="350.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/img/imgCarros/carroLaranja.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgCarroBranco" fitHeight="40.0" fitWidth="18.0" layoutX="145.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+               <image>
+                  <Image url="@../resources/img/imgCarros/carroBranco.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgCarroMarrom" fitHeight="40.0" fitWidth="18.0" layoutX="588.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/img/imgCarros/carroMarrom.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgCarroAmarelo" fitHeight="40.0" fitWidth="18.0" layoutX="465.0" layoutY="549.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+               <image>
+                  <Image url="@../resources/img/imgCarros/carroAmarelo.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgCarroRoxo" fitHeight="40.0" fitWidth="18.0" layoutX="261.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+               <image>
+                  <Image url="@../resources/img/imgCarros/carroRoxo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnResetar" layoutX="673.0" layoutY="512.0" mnemonicParsing="false" onAction="#resetar" prefHeight="50.0" prefWidth="50.0" style="-fx-cursor: hand;" stylesheets="@EstiloAutomato.css">
+               <graphic>
+                  <ImageView fx:id="imgResetar" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/imgButtons/resetar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <HBox layoutX="691.0" layoutY="6.0" prefHeight="21.0" prefWidth="109.0">
+               <children>
+                  <Region prefHeight="21.0" prefWidth="28.0" />
+                  <Label fx:id="labelVermelho" stylesheets="@EstiloAutomato.css" text="20" textFill="RED" />
+                  <Label text="km/h" textFill="RED">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="691.0" layoutY="71.0" prefHeight="21.0" prefWidth="109.0">
+               <children>
+                  <Region prefHeight="21.0" prefWidth="28.0" />
+                  <Label fx:id="labelAzul" stylesheets="@EstiloAutomato.css" text="20" textFill="#0003ff" />
+                  <Label text="km/h" textFill="#0003ff">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="691.0" layoutY="129.0" prefHeight="21.0" prefWidth="109.0">
+               <children>
+                  <Region prefHeight="21.0" prefWidth="28.0" />
+                  <Label fx:id="labelVerde" stylesheets="@EstiloAutomato.css" text="20" textFill="#24ff00" />
+                  <Label text="km/h" textFill="#24ff00">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="691.0" layoutY="186.0" prefHeight="21.0" prefWidth="109.0">
+               <children>
+                  <Region prefHeight="21.0" prefWidth="28.0" />
+                  <Label fx:id="labelLaranja" stylesheets="@EstiloAutomato.css" text="20" textFill="#ff7a00" />
+                  <Label text="km/h" textFill="#ff7a00">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="691.0" layoutY="245.0" prefHeight="21.0" prefWidth="109.0">
+               <children>
+                  <Region prefHeight="21.0" prefWidth="28.0" />
+                  <Label fx:id="labelBranco" stylesheets="@EstiloAutomato.css" text="20" textFill="WHITE" />
+                  <Label text="km/h" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="691.0" layoutY="304.0" prefHeight="21.0" prefWidth="109.0">
+               <children>
+                  <Region prefHeight="21.0" prefWidth="28.0" />
+                  <Label fx:id="labelMarrom" stylesheets="@EstiloAutomato.css" text="20" textFill="#5c4033" />
+                  <Label text="km/h" textFill="#5c4033">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="691.0" layoutY="358.0" prefHeight="21.0" prefWidth="109.0">
+               <children>
+                  <Region prefHeight="21.0" prefWidth="28.0" />
+                  <Label fx:id="labelAmarelo" stylesheets="@EstiloAutomato.css" text="20" textFill="#f8d800" />
+                  <Label text="km/h" textFill="#f8d800">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="691.0" layoutY="419.0" prefHeight="21.0" prefWidth="109.0">
+               <children>
+                  <Region prefHeight="21.0" prefWidth="28.0" />
+                  <Label fx:id="labelRoxo" stylesheets="@EstiloAutomato.css" text="20" textFill="#993399" />
+                  <Label text="km/h" textFill="#993399">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,417 @@
+/*BOTAO INICIAL*/
+#btnIniciar {
+  -fx-background-color: #EAAE68;
+  -fx-opacity: 1;
+  -fx-background-radius: 60px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+#btnIniciar:hover {    
+  -fx-background-color:#EFC6A0;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+} 
+#btnIniciar:pressed {  
+  -fx-background-color: #EAAE68;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+}
+
+/*BOTAO RESET*/
+#btnResetar {
+  -fx-background-color: #ffffff;
+  -fx-opacity: 1;
+  -fx-background-radius: 60px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+#btnResetar:hover {    
+  -fx-background-color:#565454;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+} 
+#btnResetar:pressed {  
+  -fx-background-color: #ffffff;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+}
+
+
+/*BOTAO/SLIDER VERMELHO*/
+#btnPlayVermelho {
+  -fx-background-color: #FF0000;
+  -fx-opacity: 1;
+  -fx-background-radius: 60px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+#btnPlayVermelho:hover {    
+  -fx-background-color:#ed5959;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+} 
+#btnPlayVermelho:pressed {  
+  -fx-background-color: #FF0000;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+}
+#btnViewVermelho {
+  -fx-background-color: #FF0000;
+  -fx-opacity: 1;
+  -fx-background-radius: 60px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+#btnViewVermelho:hover {    
+  -fx-background-color:#ed5959;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+} 
+#btnViewVermelho:pressed {  
+  -fx-background-color: #FF0000;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+}
+#sliderVermelho .thumb{
+  -fx-background-color:  #FF0000;
+}
+#sliderVermelho .track {
+  -fx-background-color:  #ed5959;
+}
+#sliderVermelho .thumb:hover{
+  -fx-background-color:  #FF0000;
+  -fx-effect: dropshadow(three-pass-box, #FF0000, 10, 0.5, 0, 0);
+}
+#sliderVermelho .thumb:active{
+  -fx-background-color:  #FF0000;
+  -fx-effect: dropshadow(three-pass-box, #FF0000, 10, 0.5, 0, 0);
+}
+#sliderVermelho{
+  -fx-cursor: hand;
+}
+
+/*BOTAO/SLIDER AZUL*/
+#btnPlayAzul {
+  -fx-background-color: #0003FF;
+  -fx-opacity: 1;
+  -fx-background-radius: 60px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+#btnPlayAzul:hover {    
+  -fx-background-color:#5355e2;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+} 
+#btnPlayAzul:pressed {  
+  -fx-background-color: #0003FF;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+}
+#btnViewAzul {
+  -fx-background-color: #0003FF;
+  -fx-opacity: 1;
+  -fx-background-radius: 60px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+#btnViewAzul:hover {    
+  -fx-background-color:#5355e2;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+} 
+#btnViewAzul:pressed {  
+  -fx-background-color: #0003FF;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+}
+#sliderAzul .thumb{
+  -fx-background-color:  #0003FF;
+}
+#sliderAzul .track {
+  -fx-background-color:  #5355e2;
+}
+#sliderAzul .thumb:hover{
+  -fx-background-color:  #0003FF;
+  -fx-effect: dropshadow(three-pass-box, #0003FF, 10, 0.5, 0, 0);
+}
+#sliderAzul .thumb:active{
+  -fx-background-color:  #0003FF;
+  -fx-effect: dropshadow(three-pass-box, #0003FF, 10, 0.5, 0, 0);
+}
+#sliderAzul{
+  -fx-cursor: hand;
+}
+
+
+/*BOTAO/SLIDER VERDE*/
+#btnPlayVerde {
+  -fx-background-color: #24FF00;
+  -fx-opacity: 1;
+  -fx-background-radius: 60px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+#btnPlayVerde:hover {    
+  -fx-background-color:#84f673;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+} 
+#btnPlayVerde:pressed {  
+  -fx-background-color: #24FF00;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+}
+#btnViewVerde {
+  -fx-background-color: #24FF00;
+  -fx-opacity: 1;
+  -fx-background-radius: 60px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+#btnViewVerde:hover {    
+  -fx-background-color:#84f673;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+} 
+#btnViewVerde:pressed {  
+  -fx-background-color: #24FF00;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+}
+#sliderVerde .thumb{
+  -fx-background-color:  #24FF00;
+}
+#sliderVerde .track {
+  -fx-background-color:  #84f673;
+}
+#sliderVerde .thumb:hover{
+  -fx-background-color:  #24FF00;
+  -fx-effect: dropshadow(three-pass-box, #24FF00, 10, 0.5, 0, 0);
+}
+#sliderVerde .thumb:active{
+  -fx-background-color:  #24FF00;
+  -fx-effect: dropshadow(three-pass-box, #24FF00, 10, 0.5, 0, 0);
+}
+#sliderVerde{
+  -fx-cursor: hand;
+}
+
+
+/*BOTAO/SLIDER LARANJA*/
+#btnPlayLaranja {
+  -fx-background-color: #FF7A00;
+  -fx-opacity: 1;
+  -fx-background-radius: 60px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+#btnPlayLaranja:hover {    
+  -fx-background-color:#ffa149;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+} 
+#btnPlayLaranja:pressed {  
+  -fx-background-color: #FF7A00;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+}
+#btnViewLaranja {
+  -fx-background-color: #FF7A00;
+  -fx-opacity: 1;
+  -fx-background-radius: 60px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+#btnViewLaranja:hover {    
+  -fx-background-color:#ffa149;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+} 
+#btnViewLaranja:pressed {  
+  -fx-background-color: #FF7A00;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+}
+#sliderLaranja .thumb{
+  -fx-background-color:  #FF7A00;
+}
+#sliderLaranja .track {
+  -fx-background-color:  #ffa149;
+}
+#sliderLaranja .thumb:hover{
+  -fx-background-color:  #FF7A00;
+  -fx-effect: dropshadow(three-pass-box, #FF7A00, 10, 0.5, 0, 0);
+}
+#sliderLaranja .thumb:active{
+  -fx-background-color:  #FF7A00;
+  -fx-effect: dropshadow(three-pass-box, #FF7A00, 10, 0.5, 0, 0);
+}
+#sliderLaranja{
+  -fx-cursor: hand;
+}
+
+
+/*BOTAO/SLIDER BRANCO*/
+#btnPlayBranco {
+  -fx-background-color: #FFFFFF;
+  -fx-opacity: 1;
+  -fx-background-radius: 60px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+#btnPlayBranco:hover {    
+  -fx-background-color:#d2d0d0;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+} 
+#btnPlayBranco:pressed {  
+  -fx-background-color: #FFFFFF;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+}
+#btnViewBranco {
+  -fx-background-color: #FFFFFF;
+  -fx-opacity: 1;
+  -fx-background-radius: 60px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+#btnViewBranco:hover {    
+  -fx-background-color:#d2d0d0;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+} 
+#btnViewBranco:pressed {  
+  -fx-background-color: #FFFFFF;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+}
+#sliderBranco .thumb{
+  -fx-background-color:  #FFFFFF;
+}
+#sliderBranco .track {
+  -fx-background-color:  #d2d0d0;
+}
+#sliderBranco .thumb:hover{
+  -fx-background-color:  #FFFFFF;
+  -fx-effect: dropshadow(three-pass-box, #FFFFFF, 10, 0.5, 0, 0);
+}
+#sliderBranco .thumb:active{
+  -fx-background-color:  #FFFFFF;
+  -fx-effect: dropshadow(three-pass-box, #FFFFFF, 10, 0.5, 0, 0);
+}
+#sliderBranco{
+  -fx-cursor: hand;
+}
+
+
+/*BOTAO/SLIDER MARROM*/
+#btnPlayMarrom {
+  -fx-background-color: #5C4033;
+  -fx-opacity: 1;
+  -fx-background-radius: 60px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+#btnPlayMarrom:hover {    
+  -fx-background-color:#7d5a49;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+} 
+#btnPlayMarrom:pressed {  
+  -fx-background-color: #5C4033;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+}
+#btnViewMarrom {
+  -fx-background-color: #5C4033;
+  -fx-opacity: 1;
+  -fx-background-radius: 60px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+#btnViewMarrom:hover {    
+  -fx-background-color:#7d5a49;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+} 
+#btnViewMarrom:pressed {  
+  -fx-background-color: #5C4033;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+}
+#sliderMarrom .thumb{
+  -fx-background-color:  #5C4033;
+}
+#sliderMarrom .track {
+  -fx-background-color:  #7d5a49;
+}
+#sliderMarrom .thumb:hover{
+  -fx-background-color:  #5C4033;
+  -fx-effect: dropshadow(three-pass-box, #5C4033, 10, 0.5, 0, 0);
+}
+#sliderMarrom .thumb:active{
+  -fx-background-color:  #5C4033;
+  -fx-effect: dropshadow(three-pass-box, #5C4033, 10, 0.5, 0, 0);
+}
+#sliderMarrom{
+  -fx-cursor: hand;
+}
+
+
+/*BOTAO/SLIDER AMARELO*/
+#btnPlayAmarelo {
+  -fx-background-color: #F8D800;
+  -fx-opacity: 1;
+  -fx-background-radius: 60px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+#btnPlayAmarelo:hover {    
+  -fx-background-color:#ffef88;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+} 
+#btnPlayAmarelo:pressed {  
+  -fx-background-color: #F8D800;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+}
+#btnViewAmarelo {
+  -fx-background-color: #F8D800;
+  -fx-opacity: 1;
+  -fx-background-radius: 60px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+#btnViewAmarelo:hover {    
+  -fx-background-color:#ffef88;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+} 
+#btnViewAmarelo:pressed {  
+  -fx-background-color: #F8D800;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+}
+#sliderAmarelo .thumb{
+  -fx-background-color:  #F8D800;
+}
+#sliderAmarelo .track {
+  -fx-background-color:  #ffef88;
+}
+#sliderAmarelo .thumb:hover{
+  -fx-background-color:  #F8D800;
+  -fx-effect: dropshadow(three-pass-box, #F8D800, 10, 0.5, 0, 0);
+}
+#sliderAmarelo .thumb:active{
+  -fx-background-color:  #F8D800;
+  -fx-effect: dropshadow(three-pass-box, #F8D800, 10, 0.5, 0, 0);
+}
+#sliderAmarelo{
+  -fx-cursor: hand;
+}
+
+
+/*BOTAO/SLIDER ROXO*/
+#btnPlayRoxo {
+  -fx-background-color: #993399;
+  -fx-opacity: 1;
+  -fx-background-radius: 60px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+#btnPlayRoxo:hover {    
+  -fx-background-color:#bd3abd;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+} 
+#btnPlayRoxo:pressed {  
+  -fx-background-color: #993399;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+}
+#btnViewRoxo {
+  -fx-background-color: #993399;
+  -fx-opacity: 1;
+  -fx-background-radius: 60px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+#btnViewRoxo:hover {    
+  -fx-background-color:#bd3abd;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+} 
+#btnViewRoxo:pressed {  
+  -fx-background-color: #993399;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+}
+#sliderRoxo .thumb{
+  -fx-background-color:  #993399;
+}
+#sliderRoxo .track {
+  -fx-background-color:  #bd3abd;
+}
+#sliderRoxo .thumb:hover{
+  -fx-background-color:  #993399;
+  -fx-effect: dropshadow(three-pass-box, #993399, 10, 0.5, 0, 0);
+}
+#sliderRoxo .thumb:active{
+  -fx-background-color:  #993399;
+  -fx-effect: dropshadow(three-pass-box, #993399, 10, 0.5, 0, 0);
+}
+#sliderRoxo{
+  -fx-cursor: hand;
+}
+/*.custom-font-label {
+  -fx-font-family:
+}*/
